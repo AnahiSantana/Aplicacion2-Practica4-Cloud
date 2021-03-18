@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testing-kube-deploy
+  name: despliegue-app-2
   labels:
-    name: testing-kube-deploy
-    app: testing-kube-app
+    name: despliegue-app-2
+    app: testing-kube-app-2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: testing-kube-pod
-      app: testing-kube-app
+      name: testing-kube-pod-2
+      app: testing-kube-app-2
   template:
     metadata:
-      name: testing-kube-pod
+      name: testing-kube-pod-2
       labels:
-        name: testing-kube-pod
-        app: testing-kube-app
+        name: testing-kube-pod-2
+        app: testing-kube-app-2
     spec:
       containers:
-        - name: testing-kube-container
-          image: "<add-your-repo-uri>"
+        - name: testing-kube-container-2
+          image: "****:latest"
           imagePullPolicy: Always
           resources:
             limits:
@@ -31,7 +31,7 @@ spec:
               cpu: "0.2"
           livenessProbe:
             httpGet:
-              path: /healthcheck
-              port: 3000
+              path: /estoyvivo
+              port: 4500
             initialDelaySeconds: 5
             periodSeconds: 5
