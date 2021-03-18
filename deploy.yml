@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: testing-kube-container-2
-          image: "****:latest"
+          image: "141861444441.dkr.ecr.us-east-1.amazonaws.com/testingeks2:latest"
           imagePullPolicy: Always
           resources:
             limits:
